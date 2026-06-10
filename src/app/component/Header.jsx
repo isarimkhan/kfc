@@ -5,16 +5,16 @@ import { TableOfContents } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="bg-white border-b">
+    <header className="bg-white border-b sticky top-0 z-50 shadow-sm">
       <div className="max-w-full h-24 px-14 flex items-center justify-between">
         
         {/* Left Section */}
-        <div className="flex items-center gap-3 ">
+        <div className="flex items-center gap-3">
           <button className="mr-2">
             <TableOfContents size={30} color="black" />
           </button>
 
-          {/* KFC LOGO */}
+          {/* LOGO */}
           <Image
             src="/icons/KFC.png"
             alt="KFC Logo"
@@ -61,31 +61,28 @@ export default function Header() {
           </div>
         </div>
 
-      {/* Right Section */}
-<div className="flex items-center gap-6">
+        {/* Right Section */}
+        <div className="flex items-center gap-6">
 
-  {/* Bucket / Cart */}
-  <div className="relative flex items-center justify-center">
+          {/* Bucket */}
+          <div className="relative flex items-center justify-center">
+            <Image
+              src="/icons/bucket.png"
+              alt="Bucket"
+              width={40}
+              height={40}
+            />
 
-    <Image
-      src="/icons/bucket.png"
-      alt="Bucket"
-      width={40}
-      height={40}
-    />
+            <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-black mt-1">
+              0
+            </span>
+          </div>
 
-    {/* Centered Number */}
-    <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-black mt-1">
-      0
-    </span>
+          <button className="bg-[#EA002A] text-white px-3 py-1.5 rounded-sm font-semibold hover:bg-red-700 transition">
+            LOGIN
+          </button>
 
-  </div>
-
-  <button className="bg-[#EA002A] text-white px-2 py-1.5 rounded-sm font-semibold transition">
-    LOGIN
-  </button>
-
-</div>
+        </div>
       </div>
     </header>
   );

@@ -98,22 +98,20 @@ export default function Main() {
           </div>
         ))}
       </div>
-
+      {/* LEFT ARROW */}
       <button
-  onClick={prevSlide}
-  className="absolute left-4 top-1/2 -translate-y-1/2 hover:bg-red-600 bg-red-700 rounded-full z-10 transition-colors w-6 h-6 flex items-center justify-center"
->
-  <ChevronLeft className="text-transparent" size={16} />
-</button>
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 hover:bg-red-600 bg-red-700 rounded-full z-10 transition-colors w-6 h-6 flex items-center justify-center cursor-pointer"
+      >
+        <ChevronLeft className="stroke-white fill-none" size={20} />
+      </button>
 
       {/* RIGHT ARROW */}
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 hover:bg-red-600 bg-red-700 rounded-full z-10 transition-colors w-6 h-6 flex items-center justify-center"
+        className="absolute right-4 top-1/2 -translate-y-1/2 hover:bg-red-600 bg-red-700 rounded-full z-10 transition-colors w-6 h-6 flex items-center justify-center cursor-pointer"
       >
-        <span className="text-transparent text-md">
-          <ChevronRight fill="none" stroke="white" strokeWidth={2} />
-        </span>
+        <ChevronRight className="stroke-white fill-none" size={20} />
       </button>
     </section>
   );
