@@ -5,7 +5,7 @@ import Menu from "./component/Menu";
 import Seller from "./component/Seller";
 import TopDeal from "./component/Topdeal";
 import Deal from "./component/Deal";
-// import Footer from"./component/Footer";
+import Footer from"./component/Footer";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
     <Seller/>
     <TopDeal/>
     <Deal/>
-    {/* <Footer/> */}
+    <Footer/>
     </div>
   );
 }
