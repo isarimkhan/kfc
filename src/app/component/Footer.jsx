@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Top Logo & Social Icons */}
         <div className="flex justify-center items-center gap-8 mb-12">
           <Image
-            src="/icons/kfc.png"
+            src="/icons/KFC.png"
             alt="KFC"
             width={100}
             height={40}
