@@ -1,100 +1,89 @@
-
+"use client";
 
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1c1816] text-white pt-12 pb-6">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-[#F1F3F6] py-12 px-8 md:px-20">
+      <div className="max-w-7xl mx-auto">
+        {/* Top Logo & Social Icons */}
+        <div className="flex justify-center items-center gap-8 mb-12">
+          <Image
+            src="/icons/kfc.png"
+            alt="KFC"
+            width={100}
+            height={40}
+          />
 
-        {/* Top Section */}
-        <div className="flex flex-col lg:flex-row justify-between gap-10">
+          <div className="flex gap-3 text-black">
+            <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center cursor-pointer">
+              <FaYoutube className="text-red-600 text-xl" />
+            </div>
 
-          {/* Logo + Social */}
-          <div className="flex flex-col items-start gap-8">
-            <Image
-              src="/images/kfc-logo.png"
-              alt="KFC Logo"
-              width={80}
-              height={80}
-            />
+            <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center cursor-pointer">
+              <FaInstagram className="text-xl" />
+            </div>
 
-            <div className="flex gap-4">
-              <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center cursor-pointer hover:bg-red-600 transition">
-                <FaYoutube size={20} />
-              </div>
-
-              <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center cursor-pointer hover:bg-red-600 transition">
-                <FaInstagram size={20} />
-              </div>
-
-              <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center cursor-pointer hover:bg-red-600 transition">
-                <FaFacebookF size={20} />
-              </div>
+            <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center cursor-pointer">
+              <FaFacebookF className="text-blue-600 text-lg" />
             </div>
           </div>
+        </div>
 
-          {/* Links */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 flex-1">
+        {/* Main Footer Content */}
+        <div className="flex flex-col lg:flex-row justify-between gap-10 text-black">
+          {/* Footer Links */}
+          <div className="flex flex-col text-black md:flex-row gap-12 md:gap-24 ">
+            <ul className="space-y-4 text-[16px]">
+              <li className="cursor-pointer hover:text-[#EA002A]">About Us</li>
+              <li className="cursor-pointer hover:text-[#EA002A]">Mitao Bhook</li>
+              <li className="cursor-pointer hover:text-[#EA002A]">Mitao Bhook - Scholarship</li>
+              <li className="cursor-pointer hover:text-[#EA002A]">Privacy Policy</li>
+              <li className="cursor-pointer hover:text-[#EA002A]">Careers</li>
+            </ul>
 
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="#" className="hover:text-red-500">About Us</a>
-              <a href="#" className="hover:text-red-500">Mitao Bhook</a>
-              <a href="#" className="hover:text-red-500">
-                Mitao Bhook - Scholarship
-              </a>
-              <a href="#" className="hover:text-red-500">Privacy Policy</a>
-              <a href="#" className="hover:text-red-500">Careers</a>
-            </div>
+            <ul className="space-y-4 text-[16px]">
+              <li className="cursor-pointer hover:text-[#EA002A]">Contact Us</li>
+              <li className="cursor-pointer hover:text-[#EA002A]">Store Locator</li>
+              <li className="cursor-pointer hover:text-[#EA002A]">Track Order</li>
+            </ul>
 
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="#" className="hover:text-red-500">Contact Us</a>
-              <a href="#" className="hover:text-red-500">Store Locator</a>
-              <a href="#" className="hover:text-red-500">Track Order</a>
-            </div>
+            <ul className="space-y-4 text-[16px]">
+              <li className="cursor-pointer hover:text-[#EA002A]">Terms & Conditions</li>
+            </ul>
+          </div>
 
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="#" className="hover:text-red-500">
-                Terms & Conditions
-              </a>
-            </div>
+          {/* App Buttons */}
+          <div className="flex flex-col gap-4 mr-50 mt-6">
+            <Image
+              src="/icons/Appstore.png"
+              alt="App Store"
+              width={150}
+              height={45}
+            />
 
-            {/* App Buttons */}
-            <div className="flex flex-col gap-4">
-              <Image
-                src="/images/app-store.png"
-                alt="App Store"
-                width={150}
-                height={50}
-              />
-
-              <Image
-                src="/images/google-play.png"
-                alt="Google Play"
-                width={150}
-                height={50}
-              />
-            </div>
-
+            <Image
+              src="/icons/googlestore.png"
+              alt="Google Play"
+              width={150}
+              height={45}
+            />
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mt-16 gap-6 text-black">
+          <p className="text-lg">
+            2026 KFC. All rights reserved
+          </p>
 
-          <p>© 2026 KFC. All rights reserved.</p>
-
-          <div className="flex gap-2">
-            <span>Powered by</span>
-            <a
-              href="#"
-              className="text-white hover:text-red-500 transition"
-            >
+          <div className="text-left md:text-right ">
+            <p className="text-red-600 font-bold mr-31">Powered by</p>
+            <a href="#" className="underline">
               SimpleX Technology Solutions
             </a>
           </div>
-
         </div>
       </div>
     </footer>
